@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "evidencedesk"
+version = "0.1.0"
+description = "A local Strands agent turns research questions into reviewable evidence packets."
+requires-python = ">=3.12"
+dependencies = [
+  "strands-agents[ollama]==1.54.0", "fastapi==0.141.1",
+  "uvicorn==0.52.4", "httpx==0.28.1", "beautifulsoup4==4.15.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.1.1"]
+
+[project.scripts]
+evidencedesk = "evidencedesk.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/evidencedesk"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

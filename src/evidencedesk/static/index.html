@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EvidenceDesk — research you can review</title><link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/"><span class="brand-mark">E<span>·</span></span> EvidenceDesk</a><span class="product-label">RESEARCH OPERATIONS</span><span id="model-status" class="model-status">Checking local model…</span></header>
+<div class="shell">
+<aside><button id="new-case" class="primary wide">＋ New research brief</button><h2 class="eyebrow">YOUR WORKSPACE</h2><div id="case-list"></div><div class="aside-foot"><strong>Evidence before confidence.</strong><p>Source checks and human decisions travel with every export.</p><small>Powered by Strands Agents<br>Local model · local case files</small></div></aside>
+<main>
+<section id="intake">
+<div class="section-kicker">FROM QUESTION TO REVIEW PACKET</div><h1>Know what the evidence<br>actually supports.</h1><p class="lead">Give your research assistant a focused brief and a set of sources. Get cited answers, visible gaps, and a record your team can check.</p>
+<div class="steps"><span><b>1</b> Capture sources</span><span><b>2</b> Agent checks evidence</span><span><b>3</b> Review & export</span></div>
+<form id="brief-form">
+<div class="card"><div class="card-heading"><div><h2>Your research brief</h2><p>One question per line. Each question keeps its own finding.</p></div><button id="load-example" type="button" class="quiet">Load real-source example ↗</button></div>
+<label for="brief-title">Brief title</label><input id="brief-title" required minlength="3" maxlength="160" placeholder="e.g. Evaluate a local agent SDK for our research team">
+<label for="questions">Questions to resolve <span>Up to 8</span></label><textarea id="questions" rows="4" required placeholder="Can this run in our existing application?&#10;What still needs a performance test?"></textarea></div>
+<div class="card"><div class="card-heading"><div><h2>Source snapshots</h2><p>The assistant sees only these sources. Pages and code samples may contain context beyond an excerpt.</p></div><button id="add-source" type="button" class="quiet">＋ Paste source</button></div>
+<div class="fetch-row"><input id="fetch-url" type="url" aria-label="Official documentation URL" placeholder="https://strandsagents.com/docs/…"><button id="fetch-source" type="button" class="secondary">Capture public docs</button></div><p class="micro">Importer supports Strands, Ollama, Python and AWS documentation. Paste excerpts from other sources below.</p><div id="sources"></div></div>
+<div class="submit-row"><p>Snapshots are sealed when you create the brief.<br>AI answers remain proposals until you review them.</p><button class="primary" type="submit" id="create-button">Create brief & analyze <span>→</span></button></div>
+</form></section>
+<section id="workspace" hidden>
+<div class="section-kicker">EVIDENCE REVIEW</div><div class="workspace-heading"><div><h1 id="case-title"></h1><p id="case-meta" class="subtle"></p></div><button id="export" class="primary">↓ Export review packet</button></div>
+<div id="run-banner" role="status" aria-live="polite"></div><div id="metrics" class="metrics"></div>
+<div class="review-layout"><div><div class="panel-heading"><h2>Questions & findings</h2><span class="subtle">AI judgment + checked source</span></div><div id="findings"></div></div><div class="evidence-rail"><div class="card"><h2>Source register</h2><div id="source-register"></div></div><div class="card"><h2>Agent activity</h2><p class="micro">Actual model and tool events from this run</p><div id="activity" aria-live="polite"></div></div></div></div>
+<details class="card" id="source-view"><summary>Inspect source paragraphs</summary><div id="source-paragraphs"></div></details>
+</section>
+<div id="notice" role="alert" hidden></div>
+<footer>EvidenceDesk keeps quote verification separate from interpretation. A matching quotation is an anchor, not proof of a conclusion.</footer>
+</main></div>
+</body></html>

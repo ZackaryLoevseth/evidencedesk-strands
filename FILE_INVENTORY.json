@@ -1,0 +1,191 @@
+{
+  "project": "evidencedesk-strands",
+  "staged_before_publication": true,
+  "inventory_scope": "All staged files before this inventory and SHA256SUMS were generated.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 194,
+      "sha256": "551c5f0778a14c4c13f046dff025397bd560e34054d56150507c777a5e842410"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1073,
+      "sha256": "d3d042652d83d4ad449618cd68120393ce5452b30de43c9bd4eafd5d70395414"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8653,
+      "sha256": "6b183bc4360492540c41646666bf3d87dfa5c5f7f1f0848ec5f5809a9cae1caf"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 1360,
+      "sha256": "49ab33f4c63ad34a474df63e79d9059fbbc27da27a759975beecf307c4697130"
+    },
+    {
+      "path": "docs/AI_ASSISTANCE.md",
+      "bytes": 1081,
+      "sha256": "e652a38972e719558a2ec4af0831c00e61db87bf690c6a6eaa0d0698d1f23a3c"
+    },
+    {
+      "path": "docs/architecture.mmd",
+      "bytes": 472,
+      "sha256": "bf95e070e7eb014e70f5149d2626531b1c5c346b05a7474576d01fc9ede084ba"
+    },
+    {
+      "path": "docs/architecture.svg",
+      "bytes": 3254,
+      "sha256": "1570dfbca1929b2a9f99191a166ea6750fe6c8d703c088b210971fe406055148"
+    },
+    {
+      "path": "docs/demo_script.md",
+      "bytes": 3438,
+      "sha256": "21413a0c19cf8369956a7e59b52c03cc6539565bc1011ec6ca4b3da2a6dabaf8"
+    },
+    {
+      "path": "docs/submission_draft.md",
+      "bytes": 3601,
+      "sha256": "abe57baa851e1b32ae3145f8b6e334742820abd7149c0e53008a2ef9f7bb3d9d"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 640,
+      "sha256": "a56fb3e84ba0caa2326ff55ca23f2f1df2b47190e276024ddf5ecf68fd35a299"
+    },
+    {
+      "path": "requirements-lock.txt",
+      "bytes": 1103,
+      "sha256": "41e80365cbfa377790f2917b0ec8d78552371fca1a6995ca3b3bac7d24c6dcee"
+    },
+    {
+      "path": "src/evidencedesk/__init__.py",
+      "bytes": 76,
+      "sha256": "7e5f3dd6ea2d3b0a5367f44c6c1769ce1e37a8fdf048fc15c20f99590b91230b"
+    },
+    {
+      "path": "src/evidencedesk/agent.py",
+      "bytes": 9657,
+      "sha256": "82e9b4801d9f4f1883a8f37ad114c4ac62856c18eb3f98e4de9f5a0cfc35995d"
+    },
+    {
+      "path": "src/evidencedesk/app.py",
+      "bytes": 4811,
+      "sha256": "fdb26e89bcf7109c68b89bac566d64adb4b0986a72719ecb391f36234e2f89f7"
+    },
+    {
+      "path": "src/evidencedesk/cli.py",
+      "bytes": 1235,
+      "sha256": "bc7204a963674539433377ab6a3143e7bb9c0b6425f679461408b18bfa37d5ed"
+    },
+    {
+      "path": "src/evidencedesk/core.py",
+      "bytes": 12901,
+      "sha256": "8a6771c0fecb069d1aa2242e9c6ae39559faff49a4e2e27eeb425cdc0e9bd23c"
+    },
+    {
+      "path": "src/evidencedesk/fixtures/source_pack.json",
+      "bytes": 2336,
+      "sha256": "23129d87b9f3d19c88c8a5cffff712dd62cb0c57ad44646598dd342fa567ce87"
+    },
+    {
+      "path": "src/evidencedesk/sources.py",
+      "bytes": 3015,
+      "sha256": "838c1ed6176e1dc88a5da84dc154c61a4b7a78cc2e0bd703866115a8f3d4f38c"
+    },
+    {
+      "path": "src/evidencedesk/static/app.js",
+      "bytes": 11738,
+      "sha256": "cd9a5d2b9ee03a3a5f1d07a3b1c35bfebe5c8e63ec1b66898968684060ad57e6"
+    },
+    {
+      "path": "src/evidencedesk/static/index.html",
+      "bytes": 4139,
+      "sha256": "873f5359365f6b800617a6073d0e47e3b5e62804e549a7c27471b445b2d883a3"
+    },
+    {
+      "path": "src/evidencedesk/static/style.css",
+      "bytes": 9188,
+      "sha256": "70d3c8cd5e0bcc37c282c5ad8112301743f84d259305597c70dfed8598a3b9d5"
+    },
+    {
+      "path": "src/evidencedesk/store.py",
+      "bytes": 2822,
+      "sha256": "66004f33ab0d376849ca91696e06641f714584ba3941917918dc6ed95618c4c7"
+    },
+    {
+      "path": "tests/test_api.py",
+      "bytes": 2125,
+      "sha256": "e779ffcb1f885b2e030757fd05a18996f41cc8fcc591e83f4f8b277a124031be"
+    },
+    {
+      "path": "tests/test_evidence.py",
+      "bytes": 5758,
+      "sha256": "56163e75a0966fc0f999700441c33be0961d7e0eba1c252619c04e04e40a9d80"
+    },
+    {
+      "path": "tests/test_response_validation.py",
+      "bytes": 1296,
+      "sha256": "1d48bce2ddffb0d09d4360bcfb0e54019494bf3edd28c4a9c18d8fb81cbfd32e"
+    },
+    {
+      "path": "tests/test_review_attribution.py",
+      "bytes": 2677,
+      "sha256": "c8366ea40eff1d438226cd76aae0c716542691d6220115187492ee17e9620fe2"
+    },
+    {
+      "path": "validation/REPORT.md",
+      "bytes": 5355,
+      "sha256": "8e18a5807f450bbe052cf9e87c87ca32558df15b5980332c2e9b629337d527bc"
+    },
+    {
+      "path": "validation/live_run_01/case.json",
+      "bytes": 17285,
+      "sha256": "b7a6d5da61d51ad16b4713062591c6e729aab26b9827bd6b86fffda0d4b17a10"
+    },
+    {
+      "path": "validation/live_run_01/review-packet.zip",
+      "bytes": 10459,
+      "sha256": "e0ff71570ff7e38e5ecde77d0fa136a034d2437bed8b5b69f5a4f9cc1cd55195"
+    },
+    {
+      "path": "validation/live_run_02/case.json",
+      "bytes": 19348,
+      "sha256": "732df8068f64606b42a39cfd6cd260921f0bd91978d46380de093c37782439a1"
+    },
+    {
+      "path": "validation/live_run_02/review-packet.zip",
+      "bytes": 11289,
+      "sha256": "fc5fea9a48ed07b35ca638309944e8e924880cfdf661926663e32d28500a0b1f"
+    },
+    {
+      "path": "validation/live_run_03/case.json",
+      "bytes": 22117,
+      "sha256": "8d57aff98a3cafdc7a61bb0a92c8c88fe84174b164eca01a085c9696992b20ed"
+    },
+    {
+      "path": "validation/live_run_03/review-packet.zip",
+      "bytes": 11675,
+      "sha256": "25adba8223ea6f4218a7553f35e28d0592c60bb707d874374c6f1ed51f958230"
+    },
+    {
+      "path": "validation/test_results.txt",
+      "bytes": 111,
+      "sha256": "7b9f853377351cc0bdf5b1d38664839723d4e76496577b51fbec5db3939ec19d"
+    }
+  ],
+  "exclusions": [
+    "local Ollama runtime and model weights",
+    "virtual environment",
+    "live user cases and review data",
+    "browser-demo directory and recording assets",
+    "machine-specific test logs",
+    "credentials and environment files",
+    "caches"
+  ],
+  "review": {
+    "private_path_patterns_found": 0,
+    "nested_evidence_members_checked": 61,
+    "historical_cli_inputs": "All three runs match the public fixture exactly; no human or automated review records imported."
+  }
+}

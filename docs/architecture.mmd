@@ -1,0 +1,13 @@
+flowchart LR
+  A[Researcher: brief + public sources] --> B[Local FastAPI + browser UI]
+  B --> C[Normalized snapshots + SHA-256]
+  C --> D[Strands Agent: one question per conversation]
+  D <--> E[Local Ollama / Qwen3]
+  D --> F[search_evidence tool]
+  F --> C
+  D --> G[record_finding tool]
+  G --> H[Deterministic quote + paragraph validation]
+  H --> I[Sealed original findings + tool events]
+  I --> J[Attributed review ledger]
+  I --> K[Portable review ZIP]
+  J --> K

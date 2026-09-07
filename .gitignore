@@ -1,0 +1,17 @@
+.venv/
+.runtime/
+.data/
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+*.log
+.env
+.env.*
+dist/
+build/
+*.egg-info/
+public_source/
+publication/
+validation/browser-demo/
+validation/test_default_data/

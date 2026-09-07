@@ -1,0 +1,20 @@
+{
+  "title": "Can our research team run Strands locally?",
+  "questions": [
+    "Does Strands require a hosted control plane or a separate database to stand up?",
+    "Is an AWS account required when our team uses a local Ollama model?",
+    "What measured throughput or availability guarantee do these documents establish for our laptop?"
+  ],
+  "sources": [
+    {
+      "title": "Get started | Strands Agents",
+      "url": "https://strandsagents.com/docs/user-guide/quickstart/overview/",
+      "text": "Strands runs inside your own process. Creating an agent is constructing an object\nin Python or Node.js: there is no hosted control plane, scheduler, or database to\nstand up first. Any model provider works. Amazon\nBedrock is the default; switching to Anthropic, OpenAI, Google, or Ollama means\ninstalling that provider\u2019s package and changing one line, so an AWS account is\nonly required if you keep the default.\nAdding an agent to an existing FastAPI, Express, or Next.js app is a dependency\nand a few lines of code, not new infrastructure.\n\nStrands Agents SDK is available in both Python and TypeScript.\n\nThe table below compares feature availability between the Python and TypeScript SDKs."
+    },
+    {
+      "title": "Ollama | Strands Agents",
+      "url": "https://strandsagents.com/docs/user-guide/concepts/model-providers/ollama/",
+      "text": "Ollama is a framework for running open-source large language models locally. Strands provides native support for Ollama, allowing you to use locally-hosted models in your agents.\n\nVerify the Ollama server is running: Terminal window curl http://localhost:11434/api/tags\n\nOllama supports structured output for models that have tool calling capabilities. When you pass structured_output_model parameter to the agent invocation , the Strands SDK converts your Pydantic models to tool specifications that compatible Ollama models can understand.\n\nOllama models that support tool use can use tools through Strands\u2019 tool system:\n\nConnection Refused : Ensure the Ollama server is running ( ollama serve or check Docker container status) Verify the host URL is correct For Docker: Check if port 11434 is properly exposed\n\nEnsure the Ollama server is running ( ollama serve or check Docker container status)\n\nVerify the host URL is correct"
+    }
+  ]
+}

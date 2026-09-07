@@ -1,0 +1,369 @@
+{
+  "title": "Can our research team run Strands locally?",
+  "created_at": "2026-09-07T10:03:21.402619+00:00",
+  "questions": [
+    {
+      "id": "Q1",
+      "text": "Does Strands require a hosted control plane or a separate database to stand up?"
+    },
+    {
+      "id": "Q2",
+      "text": "Is an AWS account required when our team uses a local Ollama model?"
+    },
+    {
+      "id": "Q3",
+      "text": "What measured throughput or availability guarantee do these documents establish for our laptop?"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Get started | Strands Agents",
+      "url": "https://strandsagents.com/docs/user-guide/quickstart/overview/",
+      "text": "Strands runs inside your own process. Creating an agent is constructing an object in Python or Node.js: there is no hosted control plane, scheduler, or database to stand up first. Any model provider works. Amazon Bedrock is the default; switching to Anthropic, OpenAI, Google, or Ollama means installing that provider’s package and changing one line, so an AWS account is only required if you keep the default. Adding an agent to an existing FastAPI, Express, or Next.js app is a dependency and a few lines of code, not new infrastructure.\n\nStrands Agents SDK is available in both Python and TypeScript.\n\nThe table below compares feature availability between the Python and TypeScript SDKs.",
+      "sha256": "e8a2d5d8032cebcb15b528547b5b9f1959e9723c860e4349d1eb5021fa712f99",
+      "captured_at": "2026-09-07T10:03:21.403046+00:00",
+      "acquisition": "user_supplied",
+      "paragraphs": [
+        {
+          "number": 1,
+          "text": "Strands runs inside your own process. Creating an agent is constructing an object in Python or Node.js: there is no hosted control plane, scheduler, or database to stand up first. Any model provider works. Amazon Bedrock is the default; switching to Anthropic, OpenAI, Google, or Ollama means installing that provider’s package and changing one line, so an AWS account is only required if you keep the default. Adding an agent to an existing FastAPI, Express, or Next.js app is a dependency and a few lines of code, not new infrastructure."
+        },
+        {
+          "number": 2,
+          "text": "Strands Agents SDK is available in both Python and TypeScript."
+        },
+        {
+          "number": 3,
+          "text": "The table below compares feature availability between the Python and TypeScript SDKs."
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "title": "Ollama | Strands Agents",
+      "url": "https://strandsagents.com/docs/user-guide/concepts/model-providers/ollama/",
+      "text": "Ollama is a framework for running open-source large language models locally. Strands provides native support for Ollama, allowing you to use locally-hosted models in your agents.\n\nVerify the Ollama server is running: Terminal window curl http://localhost:11434/api/tags\n\nOllama supports structured output for models that have tool calling capabilities. When you pass structured_output_model parameter to the agent invocation , the Strands SDK converts your Pydantic models to tool specifications that compatible Ollama models can understand.\n\nOllama models that support tool use can use tools through Strands’ tool system:\n\nConnection Refused : Ensure the Ollama server is running ( ollama serve or check Docker container status) Verify the host URL is correct For Docker: Check if port 11434 is properly exposed\n\nEnsure the Ollama server is running ( ollama serve or check Docker container status)\n\nVerify the host URL is correct",
+      "sha256": "dcd7ef1ae17d1214d37504ddc695f68a55b18448b96c6d58f3f3bb9d16cb987c",
+      "captured_at": "2026-09-07T10:03:21.403067+00:00",
+      "acquisition": "user_supplied",
+      "paragraphs": [
+        {
+          "number": 1,
+          "text": "Ollama is a framework for running open-source large language models locally. Strands provides native support for Ollama, allowing you to use locally-hosted models in your agents."
+        },
+        {
+          "number": 2,
+          "text": "Verify the Ollama server is running: Terminal window curl http://localhost:11434/api/tags"
+        },
+        {
+          "number": 3,
+          "text": "Ollama supports structured output for models that have tool calling capabilities. When you pass structured_output_model parameter to the agent invocation , the Strands SDK converts your Pydantic models to tool specifications that compatible Ollama models can understand."
+        },
+        {
+          "number": 4,
+          "text": "Ollama models that support tool use can use tools through Strands’ tool system:"
+        },
+        {
+          "number": 5,
+          "text": "Connection Refused : Ensure the Ollama server is running ( ollama serve or check Docker container status) Verify the host URL is correct For Docker: Check if port 11434 is properly exposed"
+        },
+        {
+          "number": 6,
+          "text": "Ensure the Ollama server is running ( ollama serve or check Docker container status)"
+        },
+        {
+          "number": 7,
+          "text": "Verify the host URL is correct"
+        }
+      ]
+    }
+  ],
+  "status": "completed_with_gaps",
+  "findings": [
+    {
+      "question_id": "Q1",
+      "assessment": "explicit",
+      "model_assessment": "explicit",
+      "explanation": "According to the source text, Strands does not require a hosted control plane or a separate database to stand up. The text explicitly states, 'there is no hosted control plane, scheduler, or database to stand up first.' Source: S1, Paragraph 1.",
+      "proposed_citation": {
+        "source_id": "S1",
+        "paragraph": 1,
+        "quote": "there is no hosted control plane, scheduler, or database to stand up first."
+      },
+      "citation": {
+        "status": "verified",
+        "reason": "Exact quotation appears in the sealed paragraph; meaning still needs review.",
+        "source_id": "S1",
+        "paragraph": 1,
+        "quote": "there is no hosted control plane, scheduler, or database to stand up first.",
+        "start": 104,
+        "end": 179,
+        "source_sha256": "e8a2d5d8032cebcb15b528547b5b9f1959e9723c860e4349d1eb5021fa712f99",
+        "url": "https://strandsagents.com/docs/user-guide/quickstart/overview/"
+      },
+      "next_step": "",
+      "review_status": "needs_review"
+    },
+    {
+      "question_id": "Q2",
+      "assessment": "explicit",
+      "model_assessment": "explicit",
+      "explanation": "According to the source text, an AWS account is only required if you keep the default. The Strands Agents documentation explicitly states that an AWS account is not necessary when using Ollama, as it provides native support for Ollama. The source text states: 'Amazon Bedrock is the default; switching to Anthropic, OpenAI, Google, or Ollama means installing that provider’s package and changing one line, so an AWS account is only required if you keep the default.'",
+      "proposed_citation": {
+        "source_id": "S1",
+        "paragraph": 1,
+        "quote": "Amazon Bedrock is the default; switching to Anthropic, OpenAI, Google, or Ollama means installing that provider’s package and changing one line, so an AWS account is only required if you keep the default."
+      },
+      "citation": {
+        "status": "verified",
+        "reason": "Exact quotation appears in the sealed paragraph; meaning still needs review.",
+        "source_id": "S1",
+        "paragraph": 1,
+        "quote": "Amazon Bedrock is the default; switching to Anthropic, OpenAI, Google, or Ollama means installing that provider’s package and changing one line, so an AWS account is only required if you keep the default.",
+        "start": 206,
+        "end": 410,
+        "source_sha256": "e8a2d5d8032cebcb15b528547b5b9f1959e9723c860e4349d1eb5021fa712f99",
+        "url": "https://strandsagents.com/docs/user-guide/quickstart/overview/"
+      },
+      "next_step": "",
+      "review_status": "needs_review"
+    },
+    {
+      "question_id": "Q3",
+      "assessment": "unresolved",
+      "model_assessment": null,
+      "explanation": "The agent did not produce a valid recorded finding for this question.",
+      "citation": {
+        "status": "missing",
+        "reason": "No agent finding recorded."
+      },
+      "next_step": "Inspect the sources or run again with a more capable local model.",
+      "review_status": "needs_review"
+    }
+  ],
+  "events": [
+    {
+      "at": "2026-09-07T10:03:21.408416+00:00",
+      "kind": "question_started",
+      "question_id": "Q1",
+      "detail": {
+        "question": "Does Strands require a hosted control plane or a separate database to stand up?"
+      }
+    },
+    {
+      "at": "2026-09-07T10:03:24.343706+00:00",
+      "kind": "tool_search",
+      "question_id": "Q1",
+      "detail": {
+        "query": "Strands requires a hosted control plane or a separate database",
+        "matches": [
+          {
+            "source_id": "S1",
+            "paragraph": 1,
+            "title": "Get started | Strands Agents",
+            "text": "Strands runs inside your own process. Creating an agent is constructing an object in Python or Node.js: there is no hosted control plane, scheduler, or database to stand up first. Any model provider works. Amazon Bedrock is the default; switching to Anthropic, OpenAI, Google, or Ollama means installing that provider’s package and changing one line, so an AWS account is only required if you keep the default. Adding an agent to an existing FastAPI, Express, or Next.js app is a dependency and a few lines of code, not new infrastructure.",
+            "score": 5
+          },
+          {
+            "source_id": "S2",
+            "paragraph": 1,
+            "title": "Ollama | Strands Agents",
+            "text": "Ollama is a framework for running open-source large language models locally. Strands provides native support for Ollama, allowing you to use locally-hosted models in your agents.",
+            "score": 2
+          },
+          {
+            "source_id": "S1",
+            "paragraph": 2,
+            "title": "Get started | Strands Agents",
+            "text": "Strands Agents SDK is available in both Python and TypeScript.",
+            "score": 1
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-07T10:03:27.628730+00:00",
+      "kind": "tool_record",
+      "question_id": "Q1",
+      "detail": {
+        "finding": {
+          "question_id": "Q1",
+          "assessment": "explicit",
+          "model_assessment": "explicit",
+          "explanation": "According to the source text, Strands does not require a hosted control plane or a separate database to stand up. The text explicitly states, 'there is no hosted control plane, scheduler, or database to stand up first.' Source: S1, Paragraph 1.",
+          "proposed_citation": {
+            "source_id": "S1",
+            "paragraph": 1,
+            "quote": "there is no hosted control plane, scheduler, or database to stand up first."
+          },
+          "citation": {
+            "status": "verified",
+            "reason": "Exact quotation appears in the sealed paragraph; meaning still needs review.",
+            "source_id": "S1",
+            "paragraph": 1,
+            "quote": "there is no hosted control plane, scheduler, or database to stand up first.",
+            "start": 104,
+            "end": 179,
+            "source_sha256": "e8a2d5d8032cebcb15b528547b5b9f1959e9723c860e4349d1eb5021fa712f99",
+            "url": "https://strandsagents.com/docs/user-guide/quickstart/overview/"
+          },
+          "next_step": "",
+          "review_status": "needs_review"
+        }
+      }
+    },
+    {
+      "at": "2026-09-07T10:03:30.237892+00:00",
+      "kind": "agent_response",
+      "question_id": "Q1",
+      "detail": {
+        "text": "{\"saved\": true, \"assessment\": \"explicit\", \"citation\": \"verified\", \"message\": \"Finding saved. Stop now. A human will review the meaning.\"}\n"
+      }
+    },
+    {
+      "at": "2026-09-07T10:03:30.237981+00:00",
+      "kind": "question_started",
+      "question_id": "Q2",
+      "detail": {
+        "question": "Is an AWS account required when our team uses a local Ollama model?"
+      }
+    },
+    {
+      "at": "2026-09-07T10:03:31.846065+00:00",
+      "kind": "tool_search",
+      "question_id": "Q2",
+      "detail": {
+        "query": "AWS account required local Ollama model",
+        "matches": [
+          {
+            "source_id": "S1",
+            "paragraph": 1,
+            "title": "Get started | Strands Agents",
+            "text": "Strands runs inside your own process. Creating an agent is constructing an object in Python or Node.js: there is no hosted control plane, scheduler, or database to stand up first. Any model provider works. Amazon Bedrock is the default; switching to Anthropic, OpenAI, Google, or Ollama means installing that provider’s package and changing one line, so an AWS account is only required if you keep the default. Adding an agent to an existing FastAPI, Express, or Next.js app is a dependency and a few lines of code, not new infrastructure.",
+            "score": 5
+          },
+          {
+            "source_id": "S2",
+            "paragraph": 3,
+            "title": "Ollama | Strands Agents",
+            "text": "Ollama supports structured output for models that have tool calling capabilities. When you pass structured_output_model parameter to the agent invocation , the Strands SDK converts your Pydantic models to tool specifications that compatible Ollama models can understand.",
+            "score": 2
+          },
+          {
+            "source_id": "S2",
+            "paragraph": 1,
+            "title": "Ollama | Strands Agents",
+            "text": "Ollama is a framework for running open-source large language models locally. Strands provides native support for Ollama, allowing you to use locally-hosted models in your agents.",
+            "score": 1
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-07T10:03:36.372077+00:00",
+      "kind": "tool_record",
+      "question_id": "Q2",
+      "detail": {
+        "finding": {
+          "question_id": "Q2",
+          "assessment": "explicit",
+          "model_assessment": "explicit",
+          "explanation": "According to the source text, an AWS account is only required if you keep the default. The Strands Agents documentation explicitly states that an AWS account is not necessary when using Ollama, as it provides native support for Ollama. The source text states: 'Amazon Bedrock is the default; switching to Anthropic, OpenAI, Google, or Ollama means installing that provider’s package and changing one line, so an AWS account is only required if you keep the default.'",
+          "proposed_citation": {
+            "source_id": "S1",
+            "paragraph": 1,
+            "quote": "Amazon Bedrock is the default; switching to Anthropic, OpenAI, Google, or Ollama means installing that provider’s package and changing one line, so an AWS account is only required if you keep the default."
+          },
+          "citation": {
+            "status": "verified",
+            "reason": "Exact quotation appears in the sealed paragraph; meaning still needs review.",
+            "source_id": "S1",
+            "paragraph": 1,
+            "quote": "Amazon Bedrock is the default; switching to Anthropic, OpenAI, Google, or Ollama means installing that provider’s package and changing one line, so an AWS account is only required if you keep the default.",
+            "start": 206,
+            "end": 410,
+            "source_sha256": "e8a2d5d8032cebcb15b528547b5b9f1959e9723c860e4349d1eb5021fa712f99",
+            "url": "https://strandsagents.com/docs/user-guide/quickstart/overview/"
+          },
+          "next_step": "",
+          "review_status": "needs_review"
+        }
+      }
+    },
+    {
+      "at": "2026-09-07T10:03:38.779942+00:00",
+      "kind": "agent_response",
+      "question_id": "Q2",
+      "detail": {
+        "text": "{\"saved\": true, \"assessment\": \"explicit\", \"citation\": \"verified\", \"message\": \"Finding saved. Stop now. A human will review the meaning.\"}\n"
+      }
+    },
+    {
+      "at": "2026-09-07T10:03:38.779955+00:00",
+      "kind": "question_started",
+      "question_id": "Q3",
+      "detail": {
+        "question": "What measured throughput or availability guarantee do these documents establish for our laptop?"
+      }
+    },
+    {
+      "at": "2026-09-07T10:03:40.288906+00:00",
+      "kind": "tool_search",
+      "question_id": "Q3",
+      "detail": {
+        "query": "throughput availability guarantee",
+        "matches": [
+          {
+            "source_id": "S1",
+            "paragraph": 3,
+            "title": "Get started | Strands Agents",
+            "text": "The table below compares feature availability between the Python and TypeScript SDKs.",
+            "score": 1
+          }
+        ]
+      }
+    },
+    {
+      "at": "2026-09-07T10:03:43.165756+00:00",
+      "kind": "agent_response",
+      "question_id": "Q3",
+      "detail": {
+        "text": "{\"assessment\": \"unresolved\", \"explanation\": \"The provided evidence does not directly address the measured throughput or availability guarantee for the laptop. The source only mentions a comparison of feature availability between SDKs and does not provide specific information about laptop performance or guarantees.\", \"next_step\": \"Review the source material for additional information on throughput or availability guarantees for the laptop.\", \"source_id\": \"S1\", \"paragraph\": 3, \"quote\": \"The table below compares feature availability between the Python and TypeScript SDKs.\"}\n"
+      }
+    },
+    {
+      "at": "2026-09-07T10:03:43.165768+00:00",
+      "kind": "record_retry",
+      "question_id": "Q3",
+      "detail": {
+        "reason": "Model answered in prose without recording its finding."
+      }
+    },
+    {
+      "at": "2026-09-07T10:03:46.317276+00:00",
+      "kind": "agent_response",
+      "question_id": "Q3",
+      "detail": {
+        "text": "{\"assessment\": \"unresolved\", \"explanation\": \"The provided evidence does not directly address the measured throughput or availability guarantee for the laptop. The source only mentions a comparison of feature availability between SDKs and does not provide specific information about laptop performance or guarantees.\", \"next_step\": \"Review the source material for additional information on throughput or availability guarantees for the laptop.\", \"source_id\": \"S1\", \"paragraph\": 3, \"quote\": \"The table below compares feature availability between the Python and TypeScript SDKs.\"}\n"
+      }
+    }
+  ],
+  "reviews": [],
+  "run": {
+    "provider": "Ollama (local)",
+    "model": "qwen3:1.7b",
+    "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "strands_version": "1.54.0",
+    "started_at": "2026-09-07T10:03:21.408410+00:00",
+    "model_calls": 9,
+    "inference": "real_model",
+    "context_tokens": 4096,
+    "temperature": 0,
+    "thinking": false,
+    "completed_at": "2026-09-07T10:03:46.317323+00:00",
+    "duration_seconds": 24.91
+  },
+  "error": "No model finding recorded for Q3",
+  "run_seal": "d1e4a9a0e7e479815fc1da623984a371051af3b3b16513187d8838cfffee2499"
+}
