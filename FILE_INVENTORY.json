@@ -1,7 +1,7 @@
 {
   "project": "evidencedesk-strands",
-  "staged_before_publication": true,
-  "inventory_scope": "All staged files before this inventory and SHA256SUMS were generated.",
+  "staged_before_publication": false,
+  "inventory_scope": "All allowlisted public source files excluding FILE_INVENTORY.json itself and SHA256SUMS. Refreshed for v0.1.0 source packaging; Git metadata is excluded.",
   "files": [
     {
       "path": ".gitignore",
@@ -15,8 +15,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8653,
-      "sha256": "6b183bc4360492540c41646666bf3d87dfa5c5f7f1f0848ec5f5809a9cae1caf"
+      "bytes": 8553,
+      "sha256": "ce9e7cf06fa296778c2711272461839bb263e8a136ac9f8dde2f88d12d252cb2"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -187,5 +187,7 @@
     "private_path_patterns_found": 0,
     "nested_evidence_members_checked": 61,
     "historical_cli_inputs": "All three runs match the public fixture exactly; no human or automated review records imported."
-  }
+  },
+  "repository": "https://github.com/ZackaryLoevseth/evidencedesk-strands",
+  "public_baseline_commit": "2e2bedb8539c39dd9ee6623eef51a1f1830ee85f"
 }

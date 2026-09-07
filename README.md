@@ -1,6 +1,6 @@
 # EvidenceDesk
 
-Planned public repository: **https://github.com/ZackaryLoevseth/evidencedesk-strands**. This source tree was staged before publication; the URL is not yet a claim that the repository exists.
+Public repository: **https://github.com/ZackaryLoevseth/evidencedesk-strands** · MIT licensed.
 
 **Turn a research brief into a packet someone else can actually review.**
 
@@ -22,7 +22,7 @@ The audience is a research or engineering team preparing a technology assessment
 
 Requires Python 3.12+, a desktop computer, and [Ollama](https://ollama.com/download). The tested local model is `qwen3:1.7b` (approximately 1.4 GB download; Apache 2.0 model license). No inference API key, paid model service, AWS credentials, Docker, Node build step, or hosted database is needed for this local build.
 
-After the repository is published (or extract the source release ZIP), enter the source directory:
+Clone the public repository (or extract the source release ZIP), then enter the source directory:
 
 ```sh
 git clone https://github.com/ZackaryLoevseth/evidencedesk-strands.git
@@ -95,4 +95,4 @@ The application is for one trusted local user. It binds to loopback, has no acco
 
 New application created September 7, 2026 for the **AWS Agents for Humans — Professional Agents** track. No previous project implementation was imported. Standard libraries and SDKs are listed in the lock file. Development used OpenAI Codex for implementation, review, tests, and documentation; this is disclosed in [AI assistance](docs/AI_ASSISTANCE.md). Real inference uses the separately downloaded Qwen model through Ollama, not Codex's response as an application result.
 
-Original project code is MIT licensed. Dependencies retain their own licenses; see [third-party notices](THIRD_PARTY_NOTICES.md). The source example consists of attributed excerpts, not a relicensed copy of the third-party documentation. A demo narrative and draft submission description are in `docs/`. Publication, registration, and the required public video are separate submission steps; this repository itself does not claim an accepted submission or award.
+Original project code is MIT licensed. Dependencies retain their own licenses; see [third-party notices](THIRD_PARTY_NOTICES.md). The source example consists of attributed excerpts, not a relicensed copy of the third-party documentation. A demo narrative and draft submission description are in `docs/`. Hackathon registration and the required public video are separate submission steps; this repository itself does not claim an accepted submission or award.
